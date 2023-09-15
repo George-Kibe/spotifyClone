@@ -1,16 +1,11 @@
-import { StyleSheet, FlatList } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 import { Text, View } from '../../components/Themed';
 
-import { tracks } from '../../data/tracks';
-
-export default function HomeScreen() {
+export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
-      <FlatList
-        data={tracks}
-        renderItem={({ item }) => <Text>{item.name}</Text>}
-      />
+      <Text style={styles.title}>Tab Two</Text>
     </View>
   );
 }
