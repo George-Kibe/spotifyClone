@@ -1,15 +1,17 @@
 import { StyleSheet, FlatList } from 'react-native';
 
 import { Text, View } from '../../components/Themed';
-
+import TrackItem from '../../components/TrackItem';
 import { tracks } from '../../data/tracks';
+import Player from '../../components/Player';
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <FlatList
         data={tracks}
-        renderItem={({ item }) => <Text>{item.name}</Text>}
+        renderItem={({ item, index }) => <TrackItem track={item} />}
+        ListHeaderComponent={() => <Player />}
       />
     </View>
   );
