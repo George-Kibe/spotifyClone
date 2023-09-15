@@ -11,7 +11,7 @@ export default function HomeScreen() {
       <FlatList
         data={tracks}
         renderItem={({ item, index }) => <TrackItem track={item} />}
-        ListHeaderComponent={() => <Player />}
+        // ListHeaderComponent={() => <Player />}
       />
     </View>
   );

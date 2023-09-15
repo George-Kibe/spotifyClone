@@ -3,6 +3,7 @@ import { Text } from './Themed';
 import React from 'react'
 
 import { Track } from '../types'
+import { usePlayerContext } from '../providers/PlayerProvider';
 
 type TrackItemProps = {
   track: Track
@@ -10,10 +11,11 @@ type TrackItemProps = {
 
 const TrackItem = ({track}: TrackItemProps) => {
     const image = track.album?.images?.[0];
+    const { setTrack } = usePlayerContext();
 
     return (
       <Pressable
-        onPress={() => console.log('Playing track: ', track.id)}
+        onPress={() => setTrack(track)}
         style={styles.container}
       >
         {image && <Image source={{ uri: image.url }} style={styles.image} />}

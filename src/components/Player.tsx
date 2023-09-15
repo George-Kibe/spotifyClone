@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { tracks } from '../data/tracks';
-const track = tracks[0];
+import { usePlayerContext } from '../providers/PlayerProvider';
 
 const Player = () => {
+  const { track } = usePlayerContext();
   if (!track) {
     return null;
   }
@@ -39,9 +39,9 @@ const Player = () => {
 
 const styles = StyleSheet.create({
   container: {
-    // position: 'absolute',
-    width: '90%',
-    // top: -80,
+    position: 'absolute',
+    width: '100%',
+    top: -80,
     height: 80,
     padding: 10,
   },
