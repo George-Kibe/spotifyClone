@@ -37,16 +37,17 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header: {
-    // marginHorizontal: 20,
+    marginHorizontal: 5,
     flexDirection: 'row',
     alignItems: 'center',
+    paddingBottom: 10,
   },
   icon: {
     paddingLeft: 20,
     paddingRight: 10
   },
   input: {
-    // backgroundColor: '#121314',
+    backgroundColor: '#e7e7e7',
     flex: 1,
     marginHorizontal: 10,
     padding: 8,
