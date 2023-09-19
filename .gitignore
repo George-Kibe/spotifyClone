@@ -3,6 +3,9 @@
 # dependencies
 node_modules/
 
+#notes with keys
+notes.md
+
 # Expo
 .expo/
 dist/
