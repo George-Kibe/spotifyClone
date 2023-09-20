@@ -54,6 +54,7 @@ const [isPlaying, setIsPlaying] = useState(false)
     console.log("isPlaying: ", isPlaying)
     if (isPlaying) {
       await sound.pauseAsync()
+      // await sound.stopAsync()
     }else {
       await sound.playAsync()
     }
