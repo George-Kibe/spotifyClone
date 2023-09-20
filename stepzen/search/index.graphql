@@ -106,13 +106,13 @@ enum SearchTypes {
 }
 
 type Query {
-  _search(q: String, type: SearchTypes, access_token: String!): SearchResult
+  _search(q: String, access_token: String!): SearchResult
     @rest(
-      endpoint: "https://api.spotify.com/v1/search"
+      endpoint: "https://api.spotify.com/v1/search?type=track"
       headers: [{ name: "authorization", value: "Bearer $access_token" }]
     )
 
-  search(q: String, type:SearchTypes): SearchResult
+  search(q: String): SearchResult
     @sequence(
       steps: [
         { query: "getToken" }
@@ -120,7 +120,7 @@ type Query {
           query: "_search",
           arguments: [
             { name: "q", argument: "q" }
-            { name: "type", argument: "type"}
+            # { name: "type", argument: "type"}
             ] }
       ]
     )
