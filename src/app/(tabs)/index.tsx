@@ -40,7 +40,7 @@ export default function HomeScreen() {
   if (error) return <Text>Error: {error.message}</Text>
 
   const tracks = data?.recommendations.tracks
-  console.log(tracks)
+  // console.log(tracks)
 
   return (
     <View style={styles.container}>
